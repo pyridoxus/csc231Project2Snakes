@@ -49,8 +49,11 @@ void draw()
 
 	// Save view translation matrix
 	glPushMatrix();
-	// Next two lines attempt to keep the "head" moving and rotating in such a
+	// Next two lines attempt to keep the "tail" moving and rotating in such a
 	// way that the rest of the "body" seems to move across the ground correctly.
+	// This seems odd, but the model starts the chain of the body with the tail
+	// because the mathematics and hierarchy seem to work out best this way.
+	// Further modification of the motions is necessary for more accuracy.
 	glTranslatef( tx, ty - SNAKEAMPLITUDE * cos((t) * 3.141592654 / 180.0), 0.0 );
 	glRotatef( SNAKEAMPLITUDE * 10 * cos(t * 3.141592654 / 180.0 + 3.0 * \
 							3.141592654 / 4.0), 0, 0, 1);
@@ -86,7 +89,7 @@ void keyboard( unsigned char key, int x, int y )
 				t -= 2;
 				break;
 			case '+':
-				// View transformation (move scene away from camera at origin)
+				// View transformation (move scene toward camera at origin)
 			  glMatrixMode( GL_MODELVIEW );
 			  glLoadIdentity();
 			  tz *= 0.95;

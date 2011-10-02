@@ -7,15 +7,15 @@ using namespace std;
 #include "Joint.h"
 #include <stdlib.h>			// Used for exit()
 
-void draw();
-void keyboard( unsigned char, int, int);
-void special( int, int, int );
-void printInstructions(void);
-void createSnake(void);
+void draw();		// Draw everything
+void keyboard( unsigned char, int, int);		// Keyboard callback
+void special( int, int, int );							// Special callback
+void printInstructions(void);								// Print instructions in stdout
+void createSnake(void);											// Initialize the snake
 
-float t = 0.0;
-float tx = -10.0;
-float ty = 0.0;
-float tz = -20.0;
+float t = 0.0;															// Time (parametric variable)
+float tx = -10.0;														// Initial snake position
+float ty = 0.0;															// Initial snake position
+float tz = -20.0;														// Initial camera depth position
 
 #endif
