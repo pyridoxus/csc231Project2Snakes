@@ -7,8 +7,6 @@ using namespace std;
 #include "Joint.h"
 #include <stdlib.h>			// Used for exit()
 
-#define MAXNUMJOINTS 20
-
 void draw();
 void keyboard( unsigned char, int, int);
 void special( int, int, int );

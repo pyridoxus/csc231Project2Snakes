@@ -152,7 +152,7 @@ void createSnake(void)
 {
 	// Create snake
 	for(int n = 0; n < MAXNUMJOINTS; n++)
-		joints[n] = new Joint(n * 40);
+		joints[n] = new Joint(n);
 	return;
 }
 
