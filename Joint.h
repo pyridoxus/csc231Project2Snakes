@@ -5,6 +5,7 @@
 
 #include <GL/glut.h>
 #include <math.h>
+#define PI 3.141592654
 
 class Joint
 {

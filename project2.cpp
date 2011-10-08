@@ -54,9 +54,9 @@ void draw()
 	// This seems odd, but the model starts the chain of the body with the tail
 	// because the mathematics and hierarchy seem to work out best this way.
 	// Further modification of the motions is necessary for more accuracy.
-	glTranslatef( tx, ty - SNAKEAMPLITUDE * cos((t) * 3.141592654 / 180.0), 0.0 );
-	glRotatef( SNAKEAMPLITUDE * 10 * cos(t * 3.141592654 / 180.0 + 3.0 * \
-							3.141592654 / 4.0), 0, 0, 1);
+	glTranslatef( tx, ty - SNAKEAMPLITUDE * cos(t * PI / 180.0), 0.0 );
+	glRotatef( SNAKEAMPLITUDE * 10 * cos(t * PI / 180.0 + 3.0 * \
+							PI / 4.0), 0, 0, 1);
 	// Draw entire system
 	for(int n = 0; n < MAXNUMJOINTS; n++)
 		if(joints[n]) joints[n]->draw(t);

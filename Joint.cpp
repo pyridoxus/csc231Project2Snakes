@@ -28,7 +28,7 @@ void Joint::draw(float t)
 
 	// SNAKEAMPLITUDE was added to experiment with the amplitude of the wave.
 	glRotatef( SNAKEAMPLITUDE * 10 * this-> factor * sin((this->offset + t) * \
-						3.141592654 / 180.0), 0, 0, 1 );
+						PI / 180.0), 0, 0, 1 );
 	glTranslatef( 0.5, 0, 0 );					// move to origin of joint
 	glPushMatrix();											// Add scaling due to joint position
 	glScalef( 1.0, this->size, this->size );				// add scaling to matrix
